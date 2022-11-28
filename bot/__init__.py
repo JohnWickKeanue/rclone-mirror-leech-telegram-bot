@@ -394,8 +394,3 @@ if not aria2_options:
     del aria2_options['lowest-speed-limit']
 LOGGER.info("fuck") 
 qb_client = get_client()
-if not qbit_options:
-    qbit_options = dict(qb_client.app_preferences())
-    del qbit_options['scan_dirs']
-else:
-    qb_client.app_set_preferences(qbit_options)
