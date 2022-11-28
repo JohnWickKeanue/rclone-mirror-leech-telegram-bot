@@ -381,6 +381,7 @@ def aria2c_init():
         LOGGER.error(f"Aria2c initializing error: {e}")
 Thread(target=aria2c_init).start()
 sleep(1.5)
+LOGGER.info("Initializing Aria2c completed")
     
 aria2c_global = ['bt-max-open-files', 'download-result', 'keep-unfinished-download-result', 'log', 'log-level',
                  'max-concurrent-downloads', 'max-download-result', 'max-overall-download-limit', 'save-session',
@@ -391,7 +392,7 @@ if not aria2_options:
     del aria2_options['dir']
     del aria2_options['max-download-limit']
     del aria2_options['lowest-speed-limit']
-   
+LOGGER.info("fuck") 
 qb_client = get_client()
 if not qbit_options:
     qbit_options = dict(qb_client.app_preferences())
