@@ -14,7 +14,7 @@ from bot.helper.ext_utils.filters import CustomFilters
 from bot.helper.ext_utils.message_utils import editMarkup, sendFile, sendMarkup, sendMessage, update_all_messages
 from bot.helper.ext_utils.misc_utils import ButtonMaker
 from bot.helper.ext_utils.rclone_data_holder import update_rclone_data
-from bot.modules.search import initiate_search_tools
+#from bot.modules.search import initiate_search_tools
 
 
 START = 0
@@ -428,8 +428,8 @@ async def start_env_listener(client, query, user_id, key):
                         GLOBAL_EXTENSION_FILTER.append('.aria2')
                         for x in fx:
                             GLOBAL_EXTENSION_FILTER.append(x.strip().lower())
-                    elif key == 'SEARCH_API_LINK':
-                        initiate_search_tools()
+                    #elif key == 'SEARCH_API_LINK':
+                        #initiate_search_tools()
                     config_dict[key] = value
                     await edit_menus(message, 'env')       
                     if DATABASE_URL:
